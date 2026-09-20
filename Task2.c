@@ -1,26 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-    int days;
-    printf("Enter number of days: ");
-    scanf("%d", &days);
-    if (days <= 0) 
+    int cnic,test;
+    printf("Do you have CNIC (1 for Yes and 0 for No): ");
+    scanf("%d", &cnic);
+    if(cnic==1)
     {
-        printf("No Fine\n");
+        printf("Have you passed the driving test? (1 = Yes, 0 = No): ");
+        scanf("%d", &test);
+
+        if (test==1)
+        {
+            printf("License Can Be Issued");
+        }
+        else
+        {
+            printf("License Cannot Be Issued to you as driving test not passed");
+        }
     }
-     else 
-      if (days >= 1 && days <= 5)  
-      {
-            printf("Fine is Rs. 50\n");
-        } 
-        else 
-            if (days >= 6 && days <= 10) 
-            {
-                printf("Fine is Rs. 100\n");
-            }
-             else
-              {
-                printf("Fine is Rs. 200\n");
-            }
+    else
+    {
+        printf("License Cannot Be Issued to you as CNIC is`1 required");
+    }
+
     return 0;
 }

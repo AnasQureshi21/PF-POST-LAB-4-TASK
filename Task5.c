@@ -1,11 +1,9 @@
 #include <stdio.h>
-int main()  
+int main()
 {
-    int num;
-    printf("Enter an integer: ");
-    scanf("%d", &num);
-    printf("The square of %d = %d\n", num, num * num);
-    printf("The cube of %d = %d\n", num, num * num * num);
-    
+    int A=8;
+    printf("A=%d \n", A);
+    printf("A<<2=%d \n", A<<2);
+    printf("A>>1=%d \n", A>>1);
     return 0;
 }
